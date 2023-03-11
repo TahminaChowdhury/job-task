@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:svg="http://www.w3.org/2000/svg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="hero-section">
+      <div class="hero-content">
+        <div>
+          <h1
+            class="heading animate__animated animate__fadeInDown animate__delay-2s"
+          >
+            Become A
+            <span
+              class="text animate__animated animate__fadeInDown animate__delay-3s"
+            >
+              JS Ninja
+            </span>
+          </h1>
+
+          <button
+            class="btn animate__animated animate__fadeInDown animate__delay-4s"
+          >
+            Kill the web
+          </button>
+        </div>
+      </div>
+      <div>
+        <img
+          src="./assets/hero-image.png"
+          alt=""
+          class="hero-img animate__animated animate__fadeInRight animate__delay-5s"
+        />
+      </div>
+    </section>
+
+    <!-- Circle text animation -->
+    <div class="animation-container">
+      <div class="circle">
+        <svg
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          width="300px"
+          height="300px"
+          viewBox="0 0 300 300"
+          enable-background="new 0 0 300 300"
+          xml:space="preserve"
+        >
+          <defs>
+            <path
+              id="circlePath"
+              d="M 150, 30 a 120,120 0 1,1 0,240 a 120,120 0 1,1 0,-240"
+            />
+          </defs>
+          <circle cx="150" cy="100" r="250" fill="none" />
+          <g>
+            <use xlink:href="#circlePath" fill="none" />
+            <text fill="#000">
+              <textPath xlink:href="#circlePath">
+                <tspan>React</tspan>
+                <tspan dx="15">Node</tspan>
+                <tspan dx="15">CSS</tspan>
+                <tspan dx="15">Next</tspan>
+                <tspan dx="15">Express</tspan>
+                <tspan dx="15">Nest</tspan>
+                <tspan dx="15">HTML</tspan>
+                <tspan dx="15">GSAP</tspan>
+                <tspan dx="15">3.JS</tspan>
+                <tspan dx="15">SASS</tspan>
+              </textPath>
+            </text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </body>
+  <script>
+    const animationContainer = document.querySelector('.animation-container');
+    const btn = document.querySelector('.btn');
+    const text = document.querySelector('.text');
+    const heading = document.querySelector('.heading');
+    const img = document.querySelector('.hero-img');
+
+    setTimeout(() => {
+      btn.classList.add('animate__fadeOutUp');
+      btn.classList.remove('animate__delay-4s', 'animate__fadeInDown');
+    }, 7000);
+
+    setTimeout(() => {
+      text.classList.add('animate__fadeOutUp');
+      text.classList.remove('animate__fadeInDown', 'animate__delay-3s');
+    }, 8000);
+
+    setTimeout(() => {
+      heading.classList.add('animate__fadeOutUp');
+      heading.classList.remove('animate__fadeInDown', 'animate__delay-2s');
+    }, 9000);
+
+    setTimeout(() => {
+      img.classList.add('animate__fadeOutRight');
+      img.classList.remove('animate__fadeInRight', 'animate__delay-5s');
+    }, 10000);
+
+    setTimeout(() => {
+      heading.classList.add('animate__fadeInDown');
+      heading.classList.remove('animate__fadeOutUp', 'animate__delay-2s');
+    }, 11000);
+
+    setTimeout(() => {
+      text.classList.add('animate__fadeInDown');
+      text.classList.remove('animate__fadeOutUp', 'animate__delay-3s');
+    }, 12000);
+
+    setTimeout(() => {
+      btn.classList.add('animate__fadeInDown');
+      btn.classList.remove('animate__fadeOutUp', 'animate__delay-4s');
+    }, 13000);
+
+    setTimeout(() => {
+      img.classList.add('animate__fadeInRight');
+      img.classList.remove('animate__fadeOutRight', 'animate__delay-5s');
+    }, 14000);
+
+    setTimeout(() => {
+      animationContainer.classList.add('show');
+    }, 6000);
+  </script>
+</html>
